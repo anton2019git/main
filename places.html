@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місця Ужгорода</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="places.html">Місця</a></li>
+                <li><a href="#" id="openModal">Вхід</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">Найцікавіші місця Ужгорода</h1>
+        <section>
+            <h2>Ужгородський замок</h2>
+            <img src="https://inside-ua.com/files/originals/uzhhorodskyi-zamok-1.webp" alt="Замок Ужгород">
+            <p>Середньовічний замок, одна з головних пам'яток міста.</p>
+        </section>
+        <section>
+            <h2>Корзо</h2>
+            <img src="https://itinery.com.ua/img/objects/object_20171107_220617.jpg" alt="Вулиця Корзо">
+            <p>Головна пішохідна вулиця міста, відома своєю атмосферою та кафе.</p>
+        </section>
+        <section>
+            <h2>Липова алея</h2>
+            <img src="https://tourinform.org.ua/wp-content/uploads/2013/05/lypy-uzhhorod.jpg" alt="Липова алея">
+            <p>Найдовша в Європі липова алея, чудове місце для прогулянок.</p>
+        </section>
+        <section>
+            <h2>Ботанічний сад УжНУ</h2>
+            <img src="https://we.org.ua/wp-content/uploads/2014/10/ecaa226548b13ffe6ba6e6e9449b9554.jpg" alt="Ботанічний сад">
+            <p>Місце, де можна насолодитися природою та рідкісними рослинами.</p>
+        </section>
+        <section>
+            <h2>Міні-скульптури Ужгорода</h2>
+            <img src="https://zaktour.gov.ua/wp-content/uploads/2024/03/shvejk-1.jpg" alt="Міні-скульптури">
+            <p>У місті встановлено понад 40 міні-скульптур, кожна з яких має свою унікальну історію.</p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modal-title">Вхід</h2>
+            <div id="login-form">
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" required>
+                    <button type="submit">Увійти</button>
+                </form>
+                <p>Ще не зареєстровані? <span class="toggle-link" id="show-register">Реєстрація</span></p>
+            </div>
+            <div id="register-form" style="display: none;">
+                <form>
+                    <label for="new-email">Email:</label>
+                    <input type="email" id="new-email" required>
+                    <label for="new-password">Пароль:</label>
+                    <input type="password" id="new-password" required>
+                    <button type="submit">Зареєструватися</button>
+                </form>
+                <p>Вже маєте акаунт? <span class="toggle-link" id="show-login">Вхід</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const openModal = document.getElementById("openModal");
+        const closeModal = document.querySelector(".close");
+
+        openModal.addEventListener("click", function() {
+            modal.style.display = "block";
+        });
+
+        closeModal.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        document.getElementById("show-register").addEventListener("click", function() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("register-form").style.display = "block";
+            document.getElementById("modal-title").textContent = "Реєстрація";
+        });
+
+        document.getElementById("show-login").addEventListener("click", function() {
+            document.getElementById("register-form").style.display = "none";
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("modal-title").textContent = "Вхід";
+        });
+    </script>
+</body>
+</html>
