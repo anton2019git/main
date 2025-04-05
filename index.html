@@ -9,10 +9,10 @@
     <style>
         /* Стили для карусели без рамки */
         .carousel {
-            width: 600px; /* Точный размер изображений */
-            height: 400px; /* Точный размер изображений */
+            width: 600px;
+            height: 400px;
             margin: auto;
-            overflow: hidden; /* Обрезаем всё лишнее */
+            overflow: hidden;
         }
 
         .carousel-track-wrapper {
@@ -29,20 +29,19 @@
         }
 
         .carousel-image {
-            width: 600px; /* Точный размер изображения */
-            height: 400px; /* Точный размер изображения */
+            width: 600px;
+            height: 400px;
             object-fit: cover;
             flex-shrink: 0;
-            display: block; /* Убираем лишние отступы */
-            margin: 0; /* Без отступов */
-            padding: 0; /* Без внутренних отступов */
-            /* Убираем все эффекты рамки */
+            display: block;
+            margin: 0;
+            padding: 0;
             border: none;
             border-radius: 0;
             box-shadow: none;
         }
 
-        /* Остальные стили для страницы */
+        /* Стили для модального окна */
         .modal {
             display: none;
             position: fixed;
@@ -69,9 +68,12 @@
             cursor: pointer;
         }
 
-        .instagram-icon {
+        /* Стили для иконок соцсетей */
+        .social-icon {
             width: 50px;
             height: auto;
+            margin: 0 10px; /* Добавляем отступы между иконками */
+            vertical-align: middle; /* Выравнивание по вертикали */
         }
     </style>
 </head>
@@ -101,9 +103,17 @@
                 </div>
             </div>
             <br>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/512px-Instagram_logo_2022.svg.png" alt="Instagram" class="instagram-icon">
-            </a>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/512px-Instagram_logo_2022.svg.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/TikTok_Logo_2021.svg/512px-TikTok_Logo_2021.svg.png" alt="TikTok" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/512px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" class="social-icon">
+                </a>
+            </div>
         </section>
     </main>
 
