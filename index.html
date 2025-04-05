@@ -6,6 +6,67 @@
     <title>Путівник</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <style>
+        /* Стили для карусели */
+        .carousel {
+            max-width: 600px; /* Устанавливаем ширину под реальный размер изображений */
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .carousel-track-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            width: 600px; /* Реальный размер изображений из URL */
+            height: 400px; /* Реальный размер изображений из URL */
+            object-fit: cover;
+            flex-shrink: 0;
+            border-radius: 12px; /* Рамка совпадает с изображением */
+            display: block; /* Убираем лишние отступы */
+        }
+
+        /* Остальные стили для модального окна и страницы */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .instagram-icon {
+            width: 50px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
