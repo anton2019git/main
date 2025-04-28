@@ -52,7 +52,6 @@ img {
     height: auto;
 }
 
-/* Единые стили для модального окна */
 .modal {
     display: none;
     position: fixed;
@@ -118,7 +117,6 @@ label {
     color: #45a049;
 }
 
-/* Стили для карусели */
 .carousel {
     width: 700px;
     margin: auto;
