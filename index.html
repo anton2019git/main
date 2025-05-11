@@ -73,13 +73,25 @@
             margin: 0 10px; 
             vertical-align: middle; 
         }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
+                <li>
+                    <a href="index.html">
+                        <img src="logo.gif" alt="Головна" class="logo"> 
+                        Головна
+                    </a>
+                </li>
                 <li><a href="places.html">Місця</a></li>
                 <li><a href="#" id="openModal">Вхід</a></li>
             </ul>
@@ -173,7 +185,6 @@
             document.getElementById("modal-title").textContent = "Вхід";
         });
 
-        // Карусель
         const track = document.querySelector('.carousel-track');
         const slides = Array.from(track.children);
         const carousel = document.getElementById('carousel');
